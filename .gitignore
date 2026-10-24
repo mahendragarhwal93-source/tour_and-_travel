@@ -1,0 +1,15 @@
+node_modules/
+server/*.db
+server/*.db-wal
+server/*.db-shm
+.env
+
+# Build output
+client/dist/
+dist/
+build/
+
+# Build output
+client/dist/
+dist/
+build/

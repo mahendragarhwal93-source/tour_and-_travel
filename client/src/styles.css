@@ -1,0 +1,63 @@
+:root {
+  --brand: #0d9488;
+  --brand-dark: #0f766e;
+  --accent: #f97316;
+  --ink: #0f172a;
+  --soft: #f1f5f9;
+  --bs-primary: var(--brand);
+  --bs-primary-rgb: 13, 148, 136;
+  --bs-link-color: var(--brand-dark);
+}
+body { background: #f8fafc; color: var(--ink); font-family: 'Segoe UI', system-ui, -apple-system, Roboto, sans-serif; }
+#root { min-height: 100vh; display: flex; flex-direction: column; }
+main { flex: 1; }
+.btn-primary { --bs-btn-bg: var(--brand); --bs-btn-border-color: var(--brand); --bs-btn-hover-bg: var(--brand-dark); --bs-btn-hover-border-color: var(--brand-dark); --bs-btn-active-bg: var(--brand-dark); --bs-btn-disabled-bg: var(--brand); --bs-btn-disabled-border-color: var(--brand); }
+.btn-outline-primary { --bs-btn-color: var(--brand); --bs-btn-border-color: var(--brand); --bs-btn-hover-bg: var(--brand); --bs-btn-hover-border-color: var(--brand); --bs-btn-active-bg: var(--brand-dark); }
+.text-brand { color: var(--brand) !important; }
+.bg-brand { background: var(--brand) !important; }
+.navbar-brand { font-weight: 800; letter-spacing: -.5px; }
+.navbar-brand i { color: var(--accent); }
+
+/* Hero */
+.hero { position: relative; color: #fff; background: linear-gradient(135deg, rgba(15,118,110,.92), rgba(14,165,233,.85)), url('https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=1600&q=60') center/cover; padding: 5rem 0 6rem; }
+.hero h1 { font-weight: 800; font-size: clamp(2rem, 5vw, 3.5rem); }
+.hero-search { background: #fff; border-radius: 1rem; padding: .5rem; box-shadow: 0 20px 40px rgba(0,0,0,.2); max-width: 640px; }
+.hero-search input { border: 0; box-shadow: none !important; }
+
+/* Cards */
+.dest-card { border: 0; border-radius: 1rem; overflow: hidden; box-shadow: 0 2px 12px rgba(15,23,42,.08); transition: transform .2s, box-shadow .2s; height: 100%; }
+.dest-card:hover { transform: translateY(-4px); box-shadow: 0 12px 28px rgba(15,23,42,.15); }
+.dest-card .thumb { position: relative; aspect-ratio: 3/2; overflow: hidden; background: var(--soft); cursor: pointer; }
+.dest-card .thumb img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s; }
+.dest-card:hover .thumb img { transform: scale(1.06); }
+.badge-cat { position: absolute; top: .75rem; left: .75rem; background: rgba(255,255,255,.92); color: var(--ink); font-weight: 600; }
+.rating { position: absolute; top: .75rem; right: .75rem; background: var(--ink); color: #fff; border-radius: 2rem; padding: .15rem .6rem; font-size: .8rem; }
+.price { color: var(--brand-dark); font-weight: 700; font-size: 1.15rem; }
+
+/* Feature tiles */
+.feature { text-align: center; padding: 1.5rem; }
+.feature i { font-size: 2.2rem; color: var(--brand); }
+
+/* Carousel */
+.carousel-item img { height: 340px; object-fit: cover; filter: brightness(.6); }
+.carousel-caption { bottom: 2rem; }
+
+/* Panels */
+.panel { background: #fff; border-radius: 1rem; box-shadow: 0 2px 12px rgba(15,23,42,.06); padding: 1.5rem; }
+.stat { background: #fff; border-radius: 1rem; padding: 1.25rem; box-shadow: 0 2px 12px rgba(15,23,42,.06); border-left: 5px solid var(--brand); }
+.stat .num { font-size: 1.8rem; font-weight: 800; }
+.trip-img { width: 72px; height: 54px; object-fit: cover; border-radius: .5rem; }
+.modal-backdrop-custom { position: fixed; inset: 0; background: rgba(15,23,42,.55); z-index: 1050; display: flex; align-items: center; justify-content: center; padding: 1rem; overflow-y: auto; }
+.modal-backdrop-custom .modal-dialog { margin: auto; width: 100%; }
+.modal-img { width: 100%; height: 260px; object-fit: cover; }
+.toast-wrap { position: fixed; top: 1rem; right: 1rem; z-index: 2000; display: flex; flex-direction: column; gap: .5rem; max-width: calc(100vw - 2rem); }
+.auth-card { max-width: 440px; margin: 3rem auto; }
+footer { background: var(--ink); color: #cbd5e1; }
+footer a { color: #cbd5e1; text-decoration: none; }
+footer a:hover { color: #fff; }
+.filter-bar { position: sticky; top: 56px; z-index: 10; }
+@media (max-width: 576px) {
+  .hero { padding: 3rem 0 4rem; }
+  .carousel-item img { height: 240px; }
+  .filter-bar { position: static; }
+}

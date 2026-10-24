@@ -1,0 +1,19 @@
+{
+  "name": "travel-planner-server",
+  "version": "1.0.0",
+  "description": "Backend for Travel Planning and Booking System",
+  "main": "index.js",
+  "engines": { "node": ">=22.13" },
+  "scripts": {
+    "start": "node --no-warnings index.js",
+    "dev": "node --no-warnings --watch index.js",
+    "seed": "node --no-warnings seed.js",
+    "test": "node --no-warnings --test test/api.test.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "express": "^4.21.0",
+    "jsonwebtoken": "^9.0.2"
+  }
+}
