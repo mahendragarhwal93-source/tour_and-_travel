@@ -13,7 +13,8 @@ export class ApiError extends Error {
 }
 
 export async function api(path, { method = 'GET', body, params } = {}) {
-  let url = `/api${path}`;
+const API_BASE_URL = (import.meta.env.VITE_API_URL || 'https://wanderly-api-4mm1.onrender.com').replace(/\/$/, '');
+let url = `${API_BASE_URL}/api${path}`;
   if (params) {
     const qs = new URLSearchParams(Object.entries(params).filter(([, v]) => v !== '' && v != null && v !== 'all'));
     if ([...qs].length) url += `?${qs}`;
